@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <meta charset="UTF-8" />
-    <title>AR модель</title>
+    <meta charset="UTF-8">
+    <title>AR Модель</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </head>
-  <body style="text-align: center; font-family: sans-serif; padding: 40px;">
+  <body style="text-align: center; padding: 40px; font-family: sans-serif;">
     <h1>Переглянути в AR</h1>
-    <p>Натисни нижче (лише Safari на iOS):</p>
 
-    <!-- Цей тег запускає Apple Quick Look -->
-    <a href="ar_model.usdz" rel="ar">
-      <img src="https://viewer.myarstudio.cloud/viewer_master/assets/btn-ar-black.svg" alt="Переглянути в AR" width="200" />
-    </a>
+    <model-viewer
+      src="model.glb"
+      ios-src="model.usdz"
+      ar
+      ar-modes="scene-viewer quick-look webxr"
+      camera-controls
+      auto-rotate
+      style="width: 100%; height: 500px;">
+    </model-viewer>
   </body>
 </html>
