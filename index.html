@@ -5,8 +5,17 @@
   <title>AR Модель</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
-    model-viewer::part(ar-button) {
-      transform: scale(1.8);
+    .custom-ar-button {
+      width: 80%;
+      max-width: 320px;
+      height: 60px;
+      background-color: #007bff;
+      color: white;
+      font-size: 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: 16px;
     }
   </style>
 </head>
@@ -25,6 +34,11 @@
     shadow-intensity="1"
     exposure="1"
     interaction-prompt="none">
+    
+    <button slot="ar-button" class="custom-ar-button">
+      📱 Переглянути в AR
+    </button>
+
   </model-viewer>
 </body>
 </html>
