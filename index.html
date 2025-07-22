@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8">
-    <title>AR Модель</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  </head>
-  <body style="text-align: center; padding: 40px; font-family: sans-serif;">
-    <h1>Переглянути в AR</h1>
+<head>
+  <meta charset="UTF-8">
+  <title>AR Модель</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    model-viewer::part(ar-button) {
+      width: 100%;
+      max-width: 300px;
+      height: 60px;
+      background-color: #007bff;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      margin-top: 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="text-align: center; padding: 40px; font-family: sans-serif;">
+  <h1>Переглянути в AR</h1>
 
-    <model-viewer
-      src="ar_model.glb"
-      ios-src="ar_model.usdz"
-      ar
-      ar-modes="scene-viewer quick-look webxr"
-      camera-controls
-      auto-rotate
-      style="width: 100%; height: 500px;">
-    </model-viewer>
-    <style>
-      model-viewer::part(ar-button) {
-        width: 100%;
-        max-width: 300px;
-        height: 60px;
-        background-color: #007bff;
-        color: white;
-        font-size: 18px;
-        border-radius: 8px;
-        margin-top: 20px;
-        border: none;
-        cursor: pointer;
-      }
-    </style>
-  </body>
+  <model-viewer
+    src="ar_model.glb"
+    ios-src="ar_model.usdz"
+    ar
+    ar-modes="scene-viewer quick-look webxr"
+    camera-controls
+    auto-rotate
+    style="width: 100%; height: 500px;">
+  </model-viewer>
+</body>
 </html>
