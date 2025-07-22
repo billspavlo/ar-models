@@ -4,28 +4,27 @@
   <meta charset="UTF-8">
   <title>AR Модель</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    model-viewer::part(ar-button) {
+      transform: scale(1.8);
+    }
+  </style>
 </head>
 <body style="text-align: center; padding: 40px; font-family: sans-serif;">
   <h1>Переглянути в AR</h1>
 
   <model-viewer
-  src="ar_model.glb"
-  ios-src="ar_model.usdz"
-  ar
-  ar-modes="scene-viewer quick-look webxr"
-  camera-controls
-  auto-rotate
-  style="width: 100%; height: 500px;"
-  ar-scale="auto"
-  shadow-intensity="1"
-  exposure="1"
-  interaction-prompt="none">
-</model-viewer>
-
-<style>
-  model-viewer::part(ar-button) {
-    transform: scale(1.8);
-  }
-</style>
+    src="ar_model.glb"
+    ios-src="ar_model.usdz"
+    ar
+    ar-modes="scene-viewer quick-look webxr"
+    camera-controls
+    auto-rotate
+    style="width: 100%; height: 500px;"
+    ar-scale="auto"
+    shadow-intensity="1"
+    exposure="1"
+    interaction-prompt="none">
+  </model-viewer>
 </body>
 </html>
